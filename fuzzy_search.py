@@ -110,13 +110,13 @@ def main():
 
     for query in queries:
 
+        # perform the query
         query_result = fuzzy_search(query, products_list)
 
+        # print the query and it's results
         print('Query: ' + query)
-
         for result in query_result:
             print(str(result.score) + ',' + result.id + ',' + result.name + ',' + result.brand)
-
         print('\n')
 
 
